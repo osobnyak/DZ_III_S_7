@@ -1,22 +1,41 @@
-﻿//Задача 47. 
-//Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
-// m = 3, n = 4.
-
-// 0,5 7 -2 -0,2
-// 1 -3,3 8 -9,9
-// 8 7,8 -7,1 9
-
-double[,] num = new double[3, 4];
+﻿int[,] num = new int[3, 4];
+double sum1 = 0;
+double sum2 = 0;
+double sum3 = 0;
+double sum4 = 0;
 
 for (int i = 0; i < num.GetLength(0); i++)
 {
     for (int j = 0; j < num.GetLength(1); j++)
     {
-        num[i, j] = (new Random().NextDouble() + new Random().Next(-9, 10));
-        Console.Write($"{Math.Round(num[i, j], 1)} ");
+        num[i, j] = new Random().Next(1, 10);
+        Console.Write($"{num[i, j]} ");
     }
     Console.WriteLine();
 }
-
 Console.WriteLine();
+
+for (int i = 0; i < num.GetLength(0); i++)
+{
+    for (int j = 0; j == 0; j++)
+    {
+        sum1 = (sum1 + num[i, j]);
+    }
+    for (int j = 1; j == 1; j++)
+    {
+        sum2 = (sum2 + num[i, j]);
+    }
+    for (int j = 2; j == 2; j++)
+    {
+        sum3 = (sum3 + num[i, j]);
+    }
+    for (int j = 3; j == 3; j++)
+    {
+        sum4 = (sum4 + num[i, j]);
+    }
+
+}
+Console.Write($"{Math.Round((sum1/3), 2)}; ");
+Console.Write($"{Math.Round((sum2/3), 2)}; ");
+Console.Write($"{Math.Round((sum3/3), 2)}; ");
+Console.WriteLine($"{Math.Round((sum4/3), 2)}. ");
